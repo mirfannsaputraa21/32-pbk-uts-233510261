@@ -7,6 +7,20 @@ const kegiatan = ref([
   { nomor: 3, Text: 'matematika deskrit', done: false }
 ]);
 
+const aktif = ref("");
+
+const addData = () => {
+  const text = aktif.value.trim();
+  if (text) {
+    kegiatan.value.push({
+      nomor: kegiatan.value.length + 1,
+      Text: text,
+      done: false
+    });
+    aktif.value = "";
+  }
+};
+
 </script>
 
 <template>
