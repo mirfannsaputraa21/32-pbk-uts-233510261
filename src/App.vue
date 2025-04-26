@@ -44,6 +44,17 @@ watch(kegiatan, () => {
 
 <template>
 
+<div class="container">
+    <h1> Daftar Kegiatan - M.IRFAN SAPUTRA</h1>
+
+    <form @submit.prevent="addData" class="form">
+      <input v-model="aktif" type="text" placeholder="Tambahkan kegiatan baru..." />
+      <button type="submit">Tambah</button>
+    </form>
+    
+  </div>
+
+
 
 </template>
 
