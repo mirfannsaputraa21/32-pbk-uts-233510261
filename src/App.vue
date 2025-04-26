@@ -22,6 +22,11 @@ const addData = () => {
   }
 };
 
+const removeItem = (nomor) => {
+  kegiatan.value = kegiatan.value.filter(item => item.nomor !== nomor);
+};
+
+
 const filteredKegiatan = computed(() => {
   return showUnfinishedOnly.value
     ? kegiatan.value.filter(item => !item.done)
