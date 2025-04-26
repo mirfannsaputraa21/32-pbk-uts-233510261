@@ -8,6 +8,7 @@ const kegiatan = ref([
 ]);
 
 const aktif = ref("");
+const showUnfinishedOnly = ref(false);
 
 const addData = () => {
   const text = aktif.value.trim();
@@ -20,6 +21,12 @@ const addData = () => {
     aktif.value = "";
   }
 };
+
+const filteredKegiatan = computed(() => {
+  return showUnfinishedOnly.value
+    ? kegiatan.value.filter(item => !item.done)
+    : kegiatan.value;
+});
 
 </script>
 
