@@ -59,6 +59,19 @@ watch(kegiatan, () => {
       </label>
     </div>
 
+    <h2> Kegiatan</h2>
+    <ul>
+      <li
+        v-for="item in filteredKegiatan"
+        :key="item.nomor"
+        :class="{ selesai: item.done }"
+      >
+        <input type="checkbox" v-model="item.done" />
+        <span>{{ item.nomor }}. {{ item.Text }}</span>
+        <button class="hapus" @click="removeItem(item.nomor)">Hapus</button>
+      </li>
+    </ul>
+
   </div>
 
 
