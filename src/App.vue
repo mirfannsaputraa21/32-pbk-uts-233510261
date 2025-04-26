@@ -33,6 +33,13 @@ const filteredKegiatan = computed(() => {
     : kegiatan.value;
 });
 
+onMounted(() => {
+  console.log("Component dimuat.");
+});
+
+watch(kegiatan, () => {
+  console.log("Daftar kegiatan diperbarui.");
+}, { deep: true });
 </script>
 
 <template>
