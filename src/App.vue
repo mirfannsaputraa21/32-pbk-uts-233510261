@@ -51,7 +51,14 @@ watch(kegiatan, () => {
       <input v-model="aktif" type="text" placeholder="Tambahkan kegiatan baru..." />
       <button type="submit">Tambah</button>
     </form>
-    
+
+    <div class="filter">
+      <label>
+        <input type="checkbox" v-model="showUnfinishedOnly" />
+        Tampilkan hanya kegiatan yang belum selesai
+      </label>
+    </div>
+
   </div>
 
 
